@@ -8,6 +8,11 @@ import { AddToCart } from "../redux/actions/action"
 
 
 function Cards() {
+  const getUser = localStorage.getItem("user_login")
+
+  if(getUser && getUser.length){
+    const user = JSON.parse(getUser)
+  }
   const dispatch =  useDispatch()
   const [data, setDate] = useState(Cardsdata);
 const send =(e)=>{
